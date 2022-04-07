@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import {Card, Col, Container, Form, Row } from "react-bootstrap";
+import Footer from './Components/Footer/Footer';
+import ToDoForm from './Components/ToDoForm/ToDoForm';
 import './App.css';
-
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <Row className="justify-content-md-center">
+          <Col lg='6' md="8" sm="12">
+          <Card border="primary">
+            <Card.Header className='text-center'>
+              <Card.Title className='appName'>To-Do App</Card.Title>
+            </Card.Header>
+            <Card.Body>
+              
+              <ToDoForm></ToDoForm>
+            </Card.Body>
+            <Card.Footer>
+              <Footer></Footer>
+            </Card.Footer>
+          </Card>
+          </Col>
+        </Row>
+      </Container>
+      
     </div>
   );
 }
