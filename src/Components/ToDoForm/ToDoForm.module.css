@@ -3,6 +3,11 @@
 }
 .submitToDo{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 14%;
+    right: 2%;
+    height: 29px!important;
+    width:29px!important;
+    text-align: center!important;
+    padding: 0px!important;
+    line-height: 0px!important;
 }

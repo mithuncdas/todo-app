@@ -1,0 +1,28 @@
+.toDoList{
+    margin-top: 10px;
+    padding: 2px;
+    border: 1px solid #1DBF73;
+    background-color: #1DBF73;
+    color: white!important;
+    border-radius: 5px;
+}
+p{
+    margin-top: 5px!important;
+    margin-left: 5px!important;
+}
+ul{
+    margin-bottom: 0px!important; 
+    text-align: end; 
+}
+li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+button{
+    margin-right: 5px;
+    padding: 7px 10px!important;
+    font-size: 12px!important;
+    background-color: white!important;
+    color: #1DBF73!important;
+}
