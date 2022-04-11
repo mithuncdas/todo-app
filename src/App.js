@@ -1,10 +1,12 @@
-import {Card, Col, Container, Form, Row } from "react-bootstrap";
+import {Card, Col, Container, Row } from "react-bootstrap";
 import Footer from './Components/Footer/Footer';
 import ToDoForm from './Components/ToDoForm/ToDoForm';
-import './App.css';
 import ToDoList from "./Components/ToDoList/ToDoList";
+import { useState } from "react";
+import './App.css';
 function App() {
-  
+  const [inputText, setInputText] = useState("");
+  const [todos, setTodos] = useState([]);
   return (
     <div className="App">
       <Container>
@@ -16,8 +18,8 @@ function App() {
             </Card.Header>
             <Card.Body>
               
-              <ToDoForm></ToDoForm>
-              <ToDoList></ToDoList>
+              <ToDoForm inputText={inputText} setInputText={setInputText} todos={todos} setTodos={setTodos}></ToDoForm>
+              <ToDoList todos={todos}></ToDoList>
             </Card.Body>
             <Card.Footer>
               <Footer></Footer>
