@@ -19,7 +19,7 @@ function App() {
             <Card.Body>
               
               <ToDoForm inputText={inputText} setInputText={setInputText} todos={todos} setTodos={setTodos}></ToDoForm>
-              <ToDoList todos={todos}></ToDoList>
+              <ToDoList todos={todos} setTodos={setTodos}></ToDoList>
             </Card.Body>
             <Card.Footer>
               <Footer></Footer>

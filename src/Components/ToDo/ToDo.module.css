@@ -10,6 +10,9 @@
     margin-top: 5px!important;
     margin-left: 20px!important;
 }
+.completed{
+  text-decoration: line-through!important;  
+}
 ul{
     margin-bottom: 0px!important; 
     text-align: end; 
