@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import styles from './ToDoForm.module.css'
 
-const ToDoForm = ({inputText,setInputText,todos, setTodos}) => {
+const ToDoForm = ({inputText,setInputText,todos, setTodos,setStatus}) => {
     const inputTextHandler = (e) => {
         setInputText(e.target.value);
     }
@@ -12,6 +12,9 @@ const ToDoForm = ({inputText,setInputText,todos, setTodos}) => {
             ...todos, {text: inputText, completed: false, id: Math.random() * 1000}
         ]);
         setInputText("");
+    }
+    const statusHandler = (e) => {
+       setStatus(e.target.value);
     }
     return (
         <div>
@@ -31,9 +34,9 @@ const ToDoForm = ({inputText,setInputText,todos, setTodos}) => {
                         </Form>
                     </Col>
                     <Col lg='4' md='4' sm='12'>
-                    <Form.Select aria-label="Default select example">
+                    <Form.Select aria-label="Default select example" onChange={statusHandler}>
                         <option>Select Type</option>
-                        <option value="All">All</option>
+                        <option defaultValue="All" value="All">All</option>
                         <option value="Pending">Pending</option>
                         <option value="Completed">Completed</option>
                     </Form.Select>
