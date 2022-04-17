@@ -21,7 +21,7 @@ const ToDoForm = ({inputText,setInputText,todos, setTodos,setStatus}) => {
             <Row>
                 <Col>
                     <Row>
-                    <Col lg='8' md='8' sm='12'>
+                    <Col lg='8' md='8' sm='12' className='mb-2'>
                         <Form>
                             <div className={styles.fullForm}>
                                 <Form.Group className={styles.ToDoForm}>
